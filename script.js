@@ -17,8 +17,8 @@ document.getElementById("calculate-button").addEventListener("click", function (
 
   document.getElementById("paid-months").textContent = monthsPassed > 0 ? monthsPassed : 0;
   document.getElementById("remaining-months").textContent = remainingMonths > 0 ? remainingMonths : 0;
-  document.getElementById("total-paid").textContent = `$${totalPaid.toFixed()}`;
-  document.getElementById("remaining-amount").textContent = `$${remainingAmount.toFixed()}`;
+  document.getElementById("total-paid").textContent = `IQD ${totalPaid.toFixed()}`;
+  document.getElementById("remaining-amount").textContent = `IQD ${remainingAmount.toFixed()}`;
 });
 
 
