@@ -1,0 +1,25 @@
+document.getElementById("calculate-button").addEventListener("click", function () {
+  const totalAmount = parseFloat(document.getElementById("total-amount").value) || 0;
+  const monthlyInstallment = parseFloat(document.getElementById("monthly-installment").value) || 0;
+  const startDateValue = document.getElementById("start-date").value;
+  const startDate = new Date(startDateValue);
+
+  if (!startDateValue || monthlyInstallment <= 0 || totalAmount <= 0) {
+    alert("Please fill out all fields correctly.");
+    return;
+  }
+
+  const currentDate = new Date();
+  const monthsPassed = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24 * 30));
+  const totalPaid = monthsPassed * monthlyInstallment;
+  const remainingAmount = totalAmount - totalPaid;
+  const remainingMonths = Math.ceil(remainingAmount / monthlyInstallment);
+
+  document.getElementById("paid-months").textContent = monthsPassed > 0 ? monthsPassed : 0;
+  document.getElementById("remaining-months").textContent = remainingMonths > 0 ? remainingMonths : 0;
+  document.getElementById("total-paid").textContent = `$${totalPaid.toFixed()}`;
+  document.getElementById("remaining-amount").textContent = `$${remainingAmount.toFixed()}`;
+});
+
+
+
