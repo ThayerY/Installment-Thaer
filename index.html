@@ -17,6 +17,11 @@
         <input type="number" id="total-amount" />
       </div>
       <div class="form-group">
+        <label for="tax-percentage">Tax Percentage (%)</label>
+        <input type="number" id="tax-percentage" placeholder="e.g., 5 for 5%" />
+      </div>
+
+      <div class="form-group">
         <label for="monthly-installment">Monthly Installment</label>
         <input type="number" id="monthly-installment" />
       </div>
@@ -26,6 +31,11 @@
       </div>
       <button id="calculate-button">Calculate</button>
       <div class="result">
+        <p>Net Total Amount</p>
+        <div id="net-total-amount" class="value">IQD 0.00</div>
+      </div>
+
+      <div class="result">
         <p>Paid Months</p>
         <div id="paid-months" class="value">0</div>
       </div>
@@ -33,6 +43,7 @@
         <p>Remaining Months</p>
         <div id="remaining-months" class="value">0</div>
       </div>
+
       <div class="result">
         <p>Total Paid</p>
         <div id="total-paid" class="value">IQD 0.00</div>
