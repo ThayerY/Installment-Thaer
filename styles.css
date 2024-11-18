@@ -1,4 +1,4 @@
- /* body {
+body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #202124, #202124);
   color: #fff;
@@ -6,17 +6,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  /* Prevent scrolling if not needed */
 }
 
 .container {
   max-width: 400px;
+  max-height: 90vh;
   width: 100%;
   background: #7457f5;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  overflow-y: auto;
+  /* Enable scrolling for long content */
 }
+
 
 .card {
   text-align: center;
@@ -72,102 +78,6 @@ button:hover {
 
 .required {
   color: red;
+  /* font-size: 20px; */
   font-weight: bold;
-}  */
-
-
-
-
-
-
-
-
-
-
-
-
-
- body {
-   font-family: Arial, sans-serif;
-   background: linear-gradient(to right, #202124, #202124);
-   color: #fff;
-   margin: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-height: 100vh;
-   overflow: hidden;
-   /* Prevent scrolling if not needed */
- }
-
- .container {
-   max-width: 400px;
-   max-height: 90vh;
-   width: 100%;
-   background: #7457f5;
-   border-radius: 8px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   padding: 20px;
-   overflow-y: auto;
-   /* Enable scrolling for long content */
- }
-
-
- .card {
-   text-align: center;
- }
-
- .title {
-   font-size: 28px;
-   font-weight: bold;
-   margin-bottom: 35px;
-   /* margin-top: 4px; */
- }
-
- .form-group {
-   margin-bottom: 15px;
-   text-align: left;
- }
-
- label {
-   display: block;
-   font-size: 14px;
-   margin-bottom: 5px;
- }
-
- input {
-   width: 100%;
-   padding: 8px;
-   font-size: 14px;
-   border: 1px solid #ccc;
-   border-radius: 4px;
- }
-
- button {
-   background: #0004f3;
-   color: #fff;
-   padding: 10px 20px;
-   border: none;
-   border-radius: 4px;
-   font-size: 16px;
-   cursor: pointer;
- }
-
- button:hover {
-   background: #262529;
- }
-
- .result {
-   margin-top: 15px;
- }
-
- .value {
-   font-size: 24px;
-   font-weight: bold;
- }
-
- .required {
-   color: red;
-   font-size: 20px;
-   font-weight: bold;
- }
+}
