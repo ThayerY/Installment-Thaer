@@ -46,6 +46,24 @@ document.getElementById("calculate-button").addEventListener("click", function (
 });
 
 
+//Add an event listener for the clearing button
+document.getElementById("clear-button").addEventListener("click", function () {
+  // Clear input fields
+  document.getElementById("total-amount").value = '';
+  document.getElementById("tax-percentage").value = '';
+  document.getElementById("monthly-installment").value = '';
+  document.getElementById("start-date").value = '';
+
+  // Reset result fields
+  document.getElementById("paid-months").textContent = '0';
+  document.getElementById("remaining-months").textContent = '0';
+  document.getElementById("total-paid").textContent = 'IQD 0.00';
+  document.getElementById("remaining-amount").textContent = 'IQD 0.00';
+  document.getElementById("net-total-amount").textContent = 'IQD 0.00';
+});
+
+
+
 
 
 
