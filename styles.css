@@ -60,7 +60,6 @@ button {
 }
 
 button:hover {
-  /* background: #4f46e5; */
   background: #262529;
 }
 
@@ -70,5 +69,10 @@ button:hover {
 
 .value {
   font-size: 24px;
+  font-weight: bold;
+}
+
+.required {
+  color: red;
   font-weight: bold;
 }
